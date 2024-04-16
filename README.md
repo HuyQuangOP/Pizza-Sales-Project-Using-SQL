@@ -25,7 +25,7 @@ SELECT
 FROM 
 	PortfolioProject..orders
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/1.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/1.png)
 
 ***2. Calculate the total revenue generated from pizza sales.***
 ```
@@ -38,7 +38,7 @@ JOIN
 ON 
 	OD.pizza_id = P.pizza_id
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/2.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/2.png)
 
 ***3. Identify the highest-priced pizza.***
 ```
@@ -47,7 +47,7 @@ SELECT
 FROM 
 	PortfolioProject..pizzas
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/3.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/3.png)
 
 ***4. Identify the most common pizza size ordered.***
 ```
@@ -64,7 +64,7 @@ GROUP BY
 ORDER BY 
 	SIZE_ORD DESC
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/4.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/4.png)
 
 ***5. List the top 5 most ordered pizza types along with their quantities.***
 ```
@@ -83,7 +83,7 @@ GROUP BY
 ORDER BY
 	QUANTITIES DESC
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/5.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/5.png)
 
 ***6. Join the necessary tables to find the total quantity of each pizza category ordered.***
 ```
@@ -102,7 +102,7 @@ GROUP BY
 ORDER BY
 	TOTAL_QUANTITY DESC
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/6.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/6.png)
 
 ***7. Determine the distribution of orders by hour of the day.***
 ```
@@ -115,7 +115,7 @@ GROUP BY
 ORDER BY 
 	DATEPART(HOUR, TIME)
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/7.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/7.png)
 
 ***8. Join relevant tables to find the category-wise distribution of pizzas.***
 ```
@@ -126,7 +126,7 @@ FROM
 GROUP BY 
 	category
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/8.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/8.png)
 
 ***9. Group the orders by date and calculate the average number of pizzas ordered per day***
 ```
@@ -145,7 +145,7 @@ FROM(
 		date) 
 			AS order_quantity
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/9.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/9.png)
 
 ***10. Determine the top 3 most ordered pizza types based on revenue.***
 ```
@@ -164,7 +164,7 @@ GROUP BY
 ORDER BY 
 	TOTAL_REV DESC
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/10.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/10.png)
 
 ***11. Calculate the percentage contribution of each pizza type to total revenue.***
 ```
@@ -190,7 +190,7 @@ JOIN
 GROUP BY
 	category
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/11.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/11.png)
 
 ***12. Analyze the cumulative revenue generated over time.***
 ```
@@ -213,7 +213,7 @@ FROM
 		ON P.pizza_type_id = PT.pizza_type_id
     GROUP BY DATE) AS DATE_REV;
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/12.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/12.png)
 
 ***13. Determine the top 3 most ordered pizza types based on revenue for each pizza category.***
 ```
@@ -236,4 +236,4 @@ FROM (SELECT
 WHERE
 	RN <=3;
 ```
-![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/13.png)
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/image/13.png)
