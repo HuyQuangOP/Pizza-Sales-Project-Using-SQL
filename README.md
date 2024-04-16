@@ -16,7 +16,6 @@ This project explores SQL queries to analyze a pizza sales dataset. It progressi
 - Determine the top 3 most ordered pizza types based on revenue for each pizza category.
 
   -----------------
-![image]([20160429_223711000_iOS.jpg](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/20160429_223711000_iOS.jpg))
 
 
 ***1. Retrieve the total number of orders placed.***
@@ -26,6 +25,7 @@ SELECT
 FROM 
 	PortfolioProject..orders
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/1.png)
 
 ***2. Calculate the total revenue generated from pizza sales.***
 ```
@@ -38,6 +38,8 @@ JOIN
 ON 
 	OD.pizza_id = P.pizza_id
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/2.png)
+
 ***3. Identify the highest-priced pizza.***
 ```
 SELECT
@@ -45,6 +47,8 @@ SELECT
 FROM 
 	PortfolioProject..pizzas
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/3.png)
+
 ***4. Identify the most common pizza size ordered.***
 ```
 SELECT 
@@ -60,6 +64,8 @@ GROUP BY
 ORDER BY 
 	SIZE_ORD DESC
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/4.png)
+
 ***5. List the top 5 most ordered pizza types along with their quantities.***
 ```
 SELECT 
@@ -77,6 +83,8 @@ GROUP BY
 ORDER BY
 	QUANTITIES DESC
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/5.png)
+
 ***6. Join the necessary tables to find the total quantity of each pizza category ordered.***
 ```
 SELECT 
@@ -94,6 +102,8 @@ GROUP BY
 ORDER BY
 	TOTAL_QUANTITY DESC
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/6.png)
+
 ***7. Determine the distribution of orders by hour of the day.***
 ```
 SELECT 
@@ -105,6 +115,8 @@ GROUP BY
 ORDER BY 
 	DATEPART(HOUR, TIME)
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/7.png)
+
 ***8. Join relevant tables to find the category-wise distribution of pizzas.***
 ```
 SELECT 
@@ -114,6 +126,8 @@ FROM
 GROUP BY 
 	category
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/8.png)
+
 ***9. Group the orders by date and calculate the average number of pizzas ordered per day***
 ```
 SELECT 
@@ -131,6 +145,8 @@ FROM(
 		date) 
 			AS order_quantity
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/9.png)
+
 ***10. Determine the top 3 most ordered pizza types based on revenue.***
 ```
 SELECT 
@@ -148,6 +164,8 @@ GROUP BY
 ORDER BY 
 	TOTAL_REV DESC
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/10.png)
+
 ***11. Calculate the percentage contribution of each pizza type to total revenue.***
 ```
 SELECT 
@@ -172,6 +190,8 @@ JOIN
 GROUP BY
 	category
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/11.png)
+
 ***12. Analyze the cumulative revenue generated over time.***
 ```
 SELECT
@@ -193,6 +213,8 @@ FROM
 		ON P.pizza_type_id = PT.pizza_type_id
     GROUP BY DATE) AS DATE_REV;
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/12.png)
+
 ***13. Determine the top 3 most ordered pizza types based on revenue for each pizza category.***
 ```
 SELECT 
@@ -214,3 +236,4 @@ FROM (SELECT
 WHERE
 	RN <=3;
 ```
+![image](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/13.png)
