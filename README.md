@@ -16,6 +16,7 @@ This project explores SQL queries to analyze a pizza sales dataset. It progressi
 - Determine the top 3 most ordered pizza types based on revenue for each pizza category.
 
   -----------------
+![image]([20160429_223711000_iOS.jpg](https://github.com/HuyQuangOP/QuangHuyDao.Portfolio/blob/main/20160429_223711000_iOS.jpg))
 
 
 ***1. Retrieve the total number of orders placed.***
