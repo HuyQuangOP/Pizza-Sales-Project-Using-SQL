@@ -71,8 +71,10 @@ JOIN
 JOIN
 	PortfolioProject..pizza_types PT 
 	ON P.pizza_type_id=PT.pizza_type_id
-GROUP BY name
-ORDER BY QUANTITIES DESC
+GROUP BY
+	name
+ORDER BY
+	QUANTITIES DESC
 ```
 ***6. Join the necessary tables to find the total quantity of each pizza category ordered.***
 ```
@@ -86,8 +88,10 @@ JOIN
 JOIN 
 	PortfolioProject..pizza_types PT 
 	ON P.pizza_type_id=PT.pizza_type_id
-GROUP BY category
-ORDER BY TOTAL_QUANTITY DESC
+GROUP BY
+	category
+ORDER BY
+	TOTAL_QUANTITY DESC
 ```
 ***7. Determine the distribution of orders by hour of the day.***
 ```
@@ -169,8 +173,9 @@ GROUP BY
 ```
 ***12. Analyze the cumulative revenue generated over time.***
 ```
-SELECT DATE, 
-    ROUND(SUM(REVENUE) OVER (ORDER BY DATE),1) AS CumulativeRevenue
+SELECT
+	DATE, 
+	ROUND(SUM(REVENUE) OVER (ORDER BY DATE),1) AS CumulativeRevenue
 FROM
     (SELECT 
 		DATE, SUM(quantity * price) AS REVENUE
@@ -205,5 +210,6 @@ FROM (SELECT
 		PortfolioProject..pizza_types PT 
 		ON P.pizza_type_id=PT.pizza_type_id
 	GROUP BY category, NAME) AS CAT_REV) AS RANK__BY_CAT
-WHERE RN <=3;
+WHERE
+	RN <=3;
 ```
